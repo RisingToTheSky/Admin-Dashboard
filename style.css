@@ -14,7 +14,7 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 2fr;
     height: 100vh;
 }
 
@@ -34,6 +34,7 @@ ul li {
 
 .search-bar {
     display: grid;
+    grid-template-rows: 1fr 1fr;
     gap: 20px;
 }
 
@@ -42,11 +43,33 @@ input[type="search"] {
     border: none;
     padding: 5px;
     background-color: var(--gray);
+    width: 550px;
 }
 
+.search {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+}
+
+.search > img {
+    width: 32px;
+    height: 32px;
+}
 .search-bar > p{
     font-size: 1.1rem;
     font-weight: bold;
+}
+
+.welcome-text {
+    display: flex;
+    gap: 15px;
+}
+
+.welcome-text > img {
+    width: 60px;
+    height: 60px;
 }
 
 .search-bar > h2 {
@@ -55,8 +78,22 @@ input[type="search"] {
 
 .user-info {
     display: grid;
+    grid-template-rows: 1fr 1fr;
     align-items: start;
-    gap: 50px;
+    gap: 20px;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    gap: 15px;
+}
+
+.profile > img {
+    width: 28px;
+    height: 28px;
 }
 
 .user-info > p {
@@ -115,16 +152,16 @@ button:hover {
 .main-content {
     display: grid;
     grid-column: 2 / 4;
-    grid-template-columns: 3fr 1fr;
     padding: 0px 25px 50px 25px;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 25px;
     background-color: var(--gray);
 }
 
 .main-content-left {
     display: grid;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: 1fr 20fr;
+    padding-top: 25px;
 }
 
 .projects {
@@ -146,15 +183,16 @@ button:hover {
     border-radius: 5px;
     background-color: var(--white);
     padding: 35px;
+    border-left: 10px solid var(--yellow);
 }
 
-.main-content-right {
-    display: grid;
-    grid-template-rows: 1fr 4fr 1fr 5fr;
+.card > div > p {
+    font-size: 0.9rem;
 }
 
-.main-content-right > p {
+.group-1 > p {
     align-self: end;
+    padding-top: 25px;
     padding-bottom: 10px;
     font-size: 1.2rem;
     font-weight: 500;
@@ -170,10 +208,6 @@ button:hover {
 .card-icons > img {
     width: 28px;
     height: 28px;
-}
-.announcements, .trending{
-    background-color: var(--white);
-    border-radius: 5px;
 }
 
 h3 {
@@ -201,26 +235,4 @@ li > span > svg {
     filter: invert(0);
     width: 28px;
     height: 28px;
-}
-
-.announcements {
-    display: grid;
-    gap: 25px;
-    padding: 25px;
-}
-
-.announcements-text {
-    padding: 20px 0px 20px 20px;
-    border-bottom: 1px solid lightgray;
-}
-
-.announcements-text > p {
-    font-size: 0.7rem;
-}
-
-.trending {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 25px;
 }
